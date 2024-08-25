@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kantumruy Pro", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #081b29;
+}
+
+.wrapper {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid #0ef;
+}
+
+.wrapper .form-box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper .form-box.login {
+    left: 0;
+    padding: 0 40px;
+}
+
+.form-box h2 {
+    font-style: 32px;
+    color: #fff;
+    text-align: center;
+}
+
+.form-box .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+    background: transparent;
+}
+
+.form-box .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    font-size: 18px;
+    color: #fff;
+    transition: .5s;
+    font-weight: 500;
+    padding-right: 23px;
+}
+
+.form-box .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-style: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    color: #0ef;
+    top: -5px;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-style: 18px;
+    color: white;
+    transition: .5s;
+}
+
+.input-box input:focus~i,
+.input-box input:valid~i {
+    color: #0ef;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid#0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-style: 16px;
+    color: #fff;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before {
+    transition: .5s;
+    top: -100%;
+    left: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 300%;
+    background: linear-gradient(#081b29, #0ef, #081b29, #0ef);
+}
+
+.btn:hover::before {
+    top: 0;
+}
+
+.form-box .logreg-link {
+    font-style: 14.5px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.form-box .logreg-link p a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-box .logreg-link p a:hover {
+    text-decoration: underline;
+}
